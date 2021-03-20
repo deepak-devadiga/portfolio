@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-roboto);
+}
+@media (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+@media (min-width: 601px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(90%);
+    -webkit-transform: rotateY(90%);
+    -moz-transform: rotateY(90%);
+    -ms-transform: rotateY(90%);
+  }
+  100% {
+    transform: rotateY(180%);
+    -webkit-transform: rotateY(180%);
+    -moz-transform: rotateY(180%);
+    -ms-transform: rotateY(180%);
+  }
+}

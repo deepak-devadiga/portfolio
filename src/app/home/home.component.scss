@@ -1,0 +1,53 @@
+.home-container {
+  background: #fff url("../../assets//images/home/home-bg-desktop.jpg")
+    no-repeat center bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  display: table;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  .content-section {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    text-align: end;
+    .welcome {
+      margin: 0;
+      text-align: left;
+      color: var(--secondary);
+      font-family: var(--font-family-lobster);
+    }
+    .my-name {
+      font-size: 8em;
+      margin: 5px;
+      color: var(--off-white);
+      line-height: 1.1em;
+      text-align: left;
+      font-weight: 800;
+    }
+    sub {
+      font-size: 1.5em;
+      color: var(--primary);
+      text-align: right;
+      span {
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+.home-container-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
