@@ -15,16 +15,13 @@
       li {
         list-style-type: none;
         display: inline-block;
-        &:hover,
-        .active {
-          border-bottom: 5px solid var(--secondary);
-        }
+
         a {
           text-decoration: none;
           color: #fff;
           padding: 30px;
           &:hover,
-          .active {
+          &.active {
             color: var(--secondary);
           }
           span {

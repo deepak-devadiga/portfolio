@@ -1,5 +1,5 @@
 .home-container {
-  background: #fff url("../../assets//images/home/home-bg-desktop.jpg")
+  background: #fff url("../../../assets/images/home/home-bg-desktop.jpg")
     no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -39,15 +39,19 @@
       font-size: 1.5em;
       color: var(--primary);
       text-align: right;
+      width: fit-content;
+      display: flex;
+      float: right;
+      text-shadow: 0 0 10px #343434;
       span.and {
         font-size: 0.7em;
         color: var(--secondary);
         font-weight: bold;
       }
       span.brackets {
-        color: var(--secondary);
+        color: var(--primary);
         font-size: 1.2em;
-        animation: blink 1.2s infinite ease-out;
+
         font-weight: bold;
       }
     }
@@ -62,38 +66,22 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 0.8;
-  }
-  20% {
-    opacity: 0.6;
-  }
-  30% {
-    opacity: 0.4;
-  }
-  40% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0.2;
-  }
-  70% {
-    opacity: 0.4;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
+.console-container {
+  font-size: 0.85em;
+  text-align: center;
+  // height: 200px;
+  // width: 600px;
+  display: block;
+  // position: absolute;
+  margin: auto;
+  transition: all 0.2s ease;
+  text-shadow: 0 0 10px #343434;
+  transition: all 0.2s ease;
+}
+.console-underscore {
+  display: inline-block;
+  position: relative;
+  top: -0.14em;
+  left: 0;
+  animation: blink 1.2s infinite ease-out;
 }
