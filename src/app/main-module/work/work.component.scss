@@ -1,0 +1,18 @@
+.work-container {
+  background: #fff url("../../../assets/images/work/work-bg-desktop.jpg")
+    no-repeat center bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  display: table;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  .scroll-point {
+    margin-top: 65px;
+  }
+}

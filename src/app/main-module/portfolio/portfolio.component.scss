@@ -1,0 +1,26 @@
+.portfolio-container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  .scroll-point {
+    margin-top: 65px;
+    .color-one {
+      position: absolute;
+      width: 250%;
+      height: 150%;
+      transform: rotate(200deg);
+      background-color: var(--success);
+      box-shadow: 0 2px 3px #ccc;
+      border: 1px solid #ddd;
+    }
+    .color-two {
+      position: absolute;
+      width: 250%;
+      height: 160%;
+      transform: rotate(-190deg);
+      background-color: var(--secondary);
+      box-shadow: 0 2px 3px #ccc;
+      border: 1px solid #ddd;
+    }
+  }
+}

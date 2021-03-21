@@ -12,6 +12,31 @@
   position: relative;
   text-align: center;
   color: #fff;
+  @media (max-width: 600px) {
+    padding: 0px 20px;
+    box-sizing: border-box;
+  }
+
+  .menu-icon {
+    position: fixed;
+    width: 35px;
+    z-index: 999;
+    top: 10px;
+    div {
+      // background-color: var(--primary);
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      margin: 7px 0;
+      height: 2px;
+      border: 1px solid var(--primary);
+      background-image: linear-gradient(
+        to right,
+        var(--secondary) 40%,
+        var(--primary)
+      );
+    }
+  }
+
   .content-section {
     position: relative;
     top: 40%;
@@ -19,6 +44,9 @@
     transform: translate(-50%, -50%);
     width: fit-content;
     text-align: end;
+    @media (max-width: 600px) {
+      top: 30%;
+    }
     .welcome {
       margin: 0;
       text-align: left;
@@ -34,6 +62,9 @@
       text-align: left;
       font-weight: 800;
       text-shadow: 0px 11px 10px rgba(0, 0, 0, 1);
+      @media (max-width: 600px) {
+        font-size: 6em;
+      }
     }
     sub {
       font-size: 1.5em;
@@ -83,5 +114,6 @@
   position: relative;
   top: -0.14em;
   left: 0;
-  animation: blink 1.2s infinite ease-out;
+  animation: blink 0.8s infinite ease-out;
+  font-weight: bold;
 }

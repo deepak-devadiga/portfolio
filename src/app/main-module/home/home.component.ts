@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'home',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedSrv: SharedService) { }
 
   ngOnInit(): void {
     this.consoleText([
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
       '#eba63f',
       '#eba63f',
       '#eba63f']);
+
   }
 
   consoleText(words, id, colors) {
@@ -71,6 +73,10 @@ export class HomeComponent implements OnInit {
       }
     }, 400)
     // }
+  }
+
+  menuClicked() {
+    this.sharedSrv.setMenuStatus(true);
   }
 
 }

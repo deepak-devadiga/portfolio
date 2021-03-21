@@ -6,5 +6,4 @@ import { Component } from "@angular/core";
   selector: 'main'
 })
 export class MainComponent {
-
 }

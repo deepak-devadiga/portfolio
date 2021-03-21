@@ -1,10 +1,25 @@
-<div class="header-container">
+<div class="header-container disable-select">
   <nav>
     <ul>
-      <li><a href="#" [ngClass]="{'active': active == 'home' || active == '/'}"><span>Home</span></a></li>
-      <li><a href="#"><span>Portfolio</span></a></li>
-      <li><a href="#"><span>Work</span></a></li>
-      <li><a href="#"><span>Contact</span></a></li>
+      <li>
+        <p class="navlink" [ngClass]="{'active': active == '/#home' || active == '/'}">
+          <span [routerLink]="'.'" fragment="home">Home</span>
+        </p>
+      </li>
+      <li>
+        <p class="navlink" [ngClass]="{'active': active == '/#portfolio'}"><span [routerLink]="'.'"
+            fragment="portfolio">Portfolio</span>
+        </p>
+      </li>
+      <li>
+        <p class="navlink" [ngClass]="{'active': active == '/#work'}"><span [routerLink]="'.'"
+            fragment="work">Work</span>
+        </p>
+      </li>
+      <li>
+        <p class="navlink" [ngClass]="{'active': active == '/#contact'}"><span [routerLink]="'.'"
+            fragment="contact">Contact</span></p>
+      </li>
     </ul>
   </nav>
 </div>

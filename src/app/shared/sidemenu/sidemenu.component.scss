@@ -1,0 +1,18 @@
+.side-menu-container {
+  position: fixed;
+  z-index: 99999;
+  transition: 0.25s ease-out;
+  height: 100vh;
+  background-color: var(--off-white);
+  width: 70%;
+  left: -70%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.close {
+  transform: translateX(0px);
+}
+
+.open {
+  transform: translateX(100%);
+}

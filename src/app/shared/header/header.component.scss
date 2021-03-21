@@ -16,18 +16,24 @@
         list-style-type: none;
         display: inline-block;
 
-        a {
+        p.navlink {
           text-decoration: none;
           color: #fff;
-          padding: 30px;
+          margin: 0;
+          padding: 0 30px;
+
           &:hover,
           &.active {
             color: var(--secondary);
           }
           span {
             transition: 0.5s ease-out;
+            cursor: pointer;
             &:hover {
               animation: flip 5s linear;
+            }
+            &:focus {
+              outline: none;
             }
           }
         }
