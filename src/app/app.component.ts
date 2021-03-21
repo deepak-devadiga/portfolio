@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import { SharedService } from './shared/shared.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '
 export class AppComponent implements OnInit {
   title = 'portfolio';
   active = '';
-  constructor(private router: Router) {
+  constructor(private router: Router, private sharedSrv: SharedService) {
 
   }
 
@@ -23,7 +24,8 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         // Hide loading indicator
         console.log('Router event end ', event);
-        this.active = event.url.toLocaleLowerCase()
+        this.active = event.url.toLocaleLowerCase();
+        this.sharedSrv.setActiveLink(this.active);
       }
 
       if (event instanceof NavigationError) {

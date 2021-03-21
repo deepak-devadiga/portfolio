@@ -6,6 +6,7 @@ import { BehaviorSubject, Subject } from "rxjs";
 })
 export class SharedService {
   menuStatus = new BehaviorSubject<boolean>(false);
+  activeLink = new BehaviorSubject<string>('');
   constructor() { }
 
   setMenuStatus(status: boolean) {
@@ -13,5 +14,12 @@ export class SharedService {
   }
   getMenuStatus() {
     return this.menuStatus.asObservable();
+  }
+
+  setActiveLink(link: string) {
+    this.activeLink.next(link)
+  }
+  getActiveLink() {
+    return this.activeLink.asObservable();
   }
 }

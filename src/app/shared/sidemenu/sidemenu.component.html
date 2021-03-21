@@ -1,2 +1,26 @@
 <div class="backdrop" *ngIf="menuStatus" (click)="menuClose()"></div>
-<div class="side-menu-container close" id="sidemenu">Side menu</div>
+<div class="side-menu-container close" id="sidemenu">
+  <nav>
+    <ul>
+      <li>
+        <p class="navlink" [ngClass]="{'active': active == '/#home' || active == '/'}">
+          <span [routerLink]="'.'" fragment="home" (click)="menuClose()">Home</span>
+        </p>
+      </li>
+      <li>
+        <p class="navlink" [ngClass]="{'active': active == '/#portfolio'}"><span [routerLink]="'.'" fragment="portfolio"
+            (click)="menuClose()">Portfolio</span>
+        </p>
+      </li>
+      <li>
+        <p class="navlink" [ngClass]="{'active': active == '/#work'}"><span [routerLink]="'.'" fragment="work"
+            (click)="menuClose()">Work</span>
+        </p>
+      </li>
+      <li>
+        <p class="navlink" [ngClass]="{'active': active == '/#contact'}"><span [routerLink]="'.'" fragment="contact"
+            (click)="menuClose()">Contact</span></p>
+      </li>
+    </ul>
+  </nav>
+</div>

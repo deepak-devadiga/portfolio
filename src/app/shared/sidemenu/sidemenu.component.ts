@@ -8,6 +8,7 @@ import { SharedService } from '../shared.service';
 })
 export class SidemenuComponent implements OnInit {
   menuStatus: boolean = false;
+  active: string = '';
 
   constructor(private sharedSrv: SharedService) { }
 
@@ -22,6 +23,9 @@ export class SidemenuComponent implements OnInit {
         document.getElementById('sidemenu').classList.remove('open');
         document.getElementById('sidemenu').classList.add('close');
       }
+    })
+    this.sharedSrv.getActiveLink().subscribe(activeLink => {
+      this.active = activeLink;
     })
   }
 
