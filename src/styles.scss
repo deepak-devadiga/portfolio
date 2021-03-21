@@ -18,6 +18,11 @@
   background: #555;
 }
 
+//iOS smooth scroll
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 html,
 body {
   margin: 0;
