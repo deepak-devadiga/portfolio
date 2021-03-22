@@ -12,6 +12,9 @@
   position: relative;
   text-align: center;
   color: #fff;
+  @media (max-width: 600px) {
+    background-attachment: initial;
+  }
   .scroll-point {
     margin-top: 65px;
   }
