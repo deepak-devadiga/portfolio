@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "git add . && git commit -m \"Code Changes\" && git push && ng build --prod --base-href=\"https://deepak-devadiga.github.io/portfolio/\" && npx angular-cli-ghpages --dir=dist/portfolio"
   },
   "private": true,
   "dependencies": {
